@@ -976,6 +976,114 @@
       .sidebar-toggle.open { left: calc(85vw + 16px); }
     }
 
+
+    /* ═══ MOBILE RESPONSIVE ═══ */
+    @media (max-width: 900px) {
+      nav { padding: 14px 20px; gap: 12px; }
+      .nav-logo { font-size: 11px; }
+      .nav-orgs { gap: 6px; padding-right: 10px; }
+      .nav-orgs img { height: 22px !important; }
+      .nav-tag { font-size: 10px; padding: 4px 10px; }
+    }
+
+    @media (max-width: 768px) {
+      /* Hide custom cursor on touch */
+      .cursor, .cursor-ring { display: none !important; }
+      body { cursor: auto; }
+
+      /* Compact nav */
+      nav { padding: 12px 16px; gap: 8px; flex-wrap: nowrap; }
+      .nav-left { flex: 1; min-width: 0; gap: 10px; }
+      .nav-orgs { padding-right: 8px; }
+      .nav-orgs img { height: 20px !important; }
+      .nav-logo { display: none; }
+      
+      /* Hide the 사전과제 안내 button text, just keep icon */
+      nav a[href="presentation-guide.html"] {
+        padding: 6px 10px !important;
+        font-size: 11px !important;
+      }
+
+      /* All sections padding */
+      section { padding: 80px 20px; }
+      .hero { padding: 100px 20px 60px; }
+      .examples-section, .demo-section, .cta-section { padding-left: 20px !important; padding-right: 20px !important; }
+
+      /* Stat row */
+      .stat-row { padding-top: 40px; margin-top: 40px; }
+      .stat-num { font-size: 36px !important; }
+
+      /* Cards already responsive */
+
+      /* Examples header */
+      .ex-header { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 32px; }
+
+      /* CTA buttons - stack */
+      .cta-inner { padding: 0 8px; }
+      .cta-btn, .cta-btn-outline {
+        width: 100%; max-width: 320px;
+        padding: 14px 24px !important;
+        font-size: 13px !important;
+        justify-content: center;
+      }
+
+      /* Demo section */
+      .demo-frame, iframe { height: 480px !important; }
+      
+      /* Cinema section */
+      #cinemaWrapper .cinema-section { 
+        height: 80vh !important; 
+        min-height: 520px !important; 
+      }
+
+      /* Reduce hero text */
+      .hero-title { font-size: clamp(32px, 9vw, 56px) !important; }
+
+      /* Footer */
+      footer { flex-direction: column; gap: 8px; text-align: center; padding: 24px 20px; }
+
+      /* Notion link area */
+      .reveal[style*="margin-top:56px"] > div[style*="flex"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 20px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav { padding: 10px 12px; }
+      .nav-orgs { gap: 4px; padding-right: 6px; }
+      .nav-orgs img { height: 18px !important; }
+      .nav-tag { display: none; }
+
+      .hero { padding: 90px 16px 50px; }
+      section { padding: 60px 16px; }
+      
+      .hero-label { font-size: 10px; margin-bottom: 20px; }
+      .hero-title { font-size: clamp(28px, 8.5vw, 44px) !important; }
+      .hero-sub { font-size: 14px; }
+
+      .section-title { font-size: clamp(24px, 6vw, 36px) !important; }
+      .section-body { font-size: 14px; }
+
+      .card { padding: 24px 20px; }
+      .ex-item { padding: 20px 0; gap: 14px; }
+      .ex-text { font-size: 16px !important; }
+      
+      .stat-num { font-size: 28px !important; }
+      .stat-label { font-size: 11px; }
+
+      .quote-text { font-size: clamp(18px, 5.5vw, 32px) !important; line-height: 1.5 !important; }
+      .cinema-headline { font-size: clamp(26px, 7vw, 44px) !important; }
+
+      .demo-frame, iframe { height: 420px !important; }
+      
+      .cta-title { font-size: clamp(24px, 6.5vw, 40px) !important; }
+      
+      /* Hide scroll indicator on very small screens */
+      .hero-scroll { display: none; }
+    }
+
   </style>
 </head>
 
@@ -1163,7 +1271,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:56px;flex-wrap:wrap;">
         <h2 class="reveal reveal-delay-1" style="font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);font-weight:700;line-height:1.2;letter-spacing:-0.02em;">
           어려워 보이나요?<br>
-          <span style="color:var(--accent);">어렵지<br>않습니다.</span>
+          <span style="color:var(--accent);">AI 10분이면<br>이게 됩니다.</span>
         </h2>
         <p class="reveal reveal-delay-2" style="font-size:15px;color:var(--muted);line-height:1.9;">
           공공기관 공문 작성 후 매번 눈으로 확인하던<br>
