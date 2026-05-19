@@ -273,6 +273,142 @@ footer{border-top:1px solid var(--border);padding:28px 40px;text-align:center;fo
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 .rd1{transition-delay:.1s;}.rd2{transition-delay:.2s;}.rd3{transition-delay:.3s;}
+
+/* ═══ MOBILE RESPONSIVE ═══ */
+@media (max-width: 900px) {
+  nav { padding: 12px 20px; gap: 12px; }
+  .nav-logo { font-size: 11px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+  .nav-tab { padding: 7px 14px; font-size: 12px; }
+}
+
+@media (max-width: 768px) {
+  /* Stack nav vertically */
+  nav {
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    gap: 10px;
+  }
+  .nav-logo {
+    order: 1; flex: 1; min-width: 0;
+    font-size: 11px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .nav-close {
+    order: 2;
+    font-size: 11px; padding: 5px 12px;
+  }
+  .nav-tabs {
+    order: 3; width: 100%;
+    justify-content: stretch;
+    padding: 3px;
+  }
+  .nav-tab {
+    flex: 1; text-align: center;
+    padding: 9px 8px;
+    font-size: 12px;
+  }
+
+  /* All containers padding */
+  .container { padding: 56px 20px; }
+  .hero { padding: 60px 20px 48px; }
+
+  /* Hero text */
+  .hero-title { font-size: clamp(24px, 7vw, 40px) !important; }
+  .hero-sub { font-size: 14px; }
+
+  /* Mission cards */
+  .mission-card-header { padding: 22px 24px; gap: 14px; }
+  .mission-num { font-size: 28px; min-width: 32px; }
+  .mission-title { font-size: clamp(16px, 4.5vw, 22px); }
+  .mission-body { padding: 0 24px 28px !important; }
+
+  /* Tables - allow horizontal scroll */
+  .info-table, .topic-table {
+    display: block; overflow-x: auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  .info-table tbody, .info-table thead, .info-table tr,
+  .topic-table tbody, .topic-table thead, .topic-table tr { display: table; width: 100%; }
+  .info-table td:first-child { min-width: 110px; }
+
+  /* Section titles */
+  .sec-title { font-size: clamp(22px, 5.5vw, 32px) !important; }
+  .sec-desc { font-size: 14px; }
+
+  /* PSI cards */
+  .psi-card { padding: 24px 20px; gap: 16px; grid-template-columns: 32px 1fr; }
+  .psi-eng { font-size: clamp(20px, 5vw, 26px); }
+  .psi-desc { font-size: 13px; }
+
+  /* Struct grid */
+  .struct-card { padding: 24px 20px; }
+  .struct-num { font-size: 32px; }
+
+  /* Download card - stack */
+  .dl-card {
+    flex-direction: column;
+    align-items: stretch !important;
+    padding: 28px 24px;
+    gap: 24px;
+  }
+  .dl-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-solid, .btn-outline {
+    width: 100%; justify-content: center;
+    padding: 14px 20px;
+  }
+  .dl-title { font-size: clamp(16px, 4vw, 20px) !important; }
+
+  /* Flow */
+  .flow-step { padding: 18px 20px; gap: 14px; }
+  .flow-text { font-size: 13px; }
+
+  /* Reference link */
+  .ref-link { padding: 12px 16px; font-size: 13px; }
+
+  /* Callout */
+  .callout { padding: 20px; font-size: 13px; }
+
+  /* Examples list */
+  .ex-row { padding: 12px 0; }
+  .ex-text { font-size: 13px !important; }
+}
+
+@media (max-width: 480px) {
+  nav { padding: 10px 12px; }
+  .nav-logo { font-size: 10px; }
+  .nav-tab { font-size: 11px; padding: 8px 6px; }
+
+  .container { padding: 48px 16px; }
+  .hero { padding: 48px 16px 40px; }
+
+  .hero-tag { font-size: 9px; margin-bottom: 14px; }
+  .hero-title { font-size: clamp(22px, 6.5vw, 32px) !important; }
+
+  /* Mission */
+  .mission-card-header { padding: 18px 16px; }
+  .mission-body { padding: 0 16px 24px !important; }
+  .mission-num { font-size: 24px; min-width: 28px; }
+
+  /* Tables more compact */
+  .info-table th, .info-table td { padding: 10px 12px; font-size: 12px; }
+  .topic-table th, .topic-table td { padding: 10px 14px; font-size: 12px; }
+  .info-table td:first-child { min-width: 90px; }
+
+  /* PSI */
+  .psi-card { padding: 20px 16px; grid-template-columns: 28px 1fr; gap: 14px; }
+  .psi-eng { font-size: clamp(18px, 5vw, 22px); }
+
+  /* Download */
+  .dl-card { padding: 24px 18px; }
+  .btn-solid, .btn-outline { font-size: 12px; padding: 13px 16px; }
+
+  footer { padding: 20px 16px; font-size: 11px; }
+}
+
 </style>
 </head>
 <body>
